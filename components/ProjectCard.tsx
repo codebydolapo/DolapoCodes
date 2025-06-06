@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { Globe, Smartphone, Group, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Globe, Smartphone, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Projects } from '@/types/types';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay'; // Optional: for auto-playing the slider

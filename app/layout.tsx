@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Marck_Script } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
 const poppins = Poppins({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700', "800", "900"]
-})
-
-const marck = Marck_Script({
-  subsets: ['latin'],
-  weight: ['400']
 })
 
 

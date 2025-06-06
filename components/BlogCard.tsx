@@ -1,13 +1,15 @@
 "use client"
 import React, { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { Globe, Smartphone, Group, ChevronLeft, ChevronRight } from 'lucide-react';
-import { BlogPosts, Projects } from '@/types/types';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { BlogPosts } from '@/types/types';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay'; // Optional: for auto-playing the slider
 
 function BlogCard({
-    title, excerpt, link, image // Destructure 'image' prop
+    title, excerpt, 
+    // link, 
+    image // Destructure 'image' prop
 }: BlogPosts) {
     // Embla Carousel hook. Autoplay plugin is added for automatic sliding.
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
