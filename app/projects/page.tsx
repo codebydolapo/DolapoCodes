@@ -12,7 +12,7 @@ function page() {
       </div>
       <div className='w-full flex items-start justify-around flex-wrap p-2 mt-4'>
 
-        {projects.map(({title, image, description, type, stack, liveLink, gitRepo})=>{
+        {projects.map(({title, image, description, type, stack, liveLink, gitRepo}, index)=>{
           return(
             <ProjectCard 
             title={title}
@@ -22,6 +22,7 @@ function page() {
             stack = {stack}
             liveLink = {liveLink}
             gitRepo = {gitRepo}
+            key = {index}
             />
           )
         })}

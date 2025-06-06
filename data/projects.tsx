@@ -6,9 +6,9 @@ const projects = [
         type: "web",
         stack: [
             {icon: "/icons/nextjs.png", technology: "Next.js"},
-            {icon: "/icons/liveblocks.png", technology: "Liveblocks"},
+            {icon: "/icons/liveblocks.jpg", technology: "Liveblocks"},
             {icon: "/icons/typescript.png", technology: "TypeScript"}, // Assuming an icon for TypeScript
-            {icon: "/icons/blocknote.png", technology: "BlockNote"}, // Assuming an icon for BlockNote
+            {icon: "/icons/blocknote.webp", technology: "BlockNote"}, // Assuming an icon for BlockNote
             {icon: "/icons/yjs.png", technology: "Yjs"}, // Assuming an icon for Yjs
             {icon: "/icons/clerk.png", technology: "Clerk"},
             {icon: "/icons/firebase.webp", technology: "Firebase"},
@@ -59,9 +59,9 @@ const projects = [
         type: "web",
         stack: [
             {icon: "/icons/nextjs.png", technology: "Next.js"},
-            {icon: "/icons/liveblocks.png", technology: "Liveblocks"},
+            {icon: "/icons/liveblocks.jpg", technology: "Liveblocks"},
             {icon: "/icons/typescript.png", technology: "TypeScript"}, // Assuming an icon for TypeScript
-            {icon: "/icons/blocknote.png", technology: "BlockNote"}, // Assuming an icon for BlockNote
+            {icon: "/icons/blocknote.webp", technology: "BlockNote"}, // Assuming an icon for BlockNote
             {icon: "/icons/yjs.png", technology: "Yjs"}, // Assuming an icon for Yjs
             {icon: "/icons/clerk.png", technology: "Clerk"},
             {icon: "/icons/firebase.webp", technology: "Firebase"},

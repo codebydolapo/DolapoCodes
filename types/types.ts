@@ -11,3 +11,15 @@ export interface Projects{
     gitRepo: string
 
 }
+
+export interface BlogPosts{
+    title: string;
+    excerpt: string;
+    link: string;
+    image: string[]
+}
+
+export interface Skills {
+    icon: string;
+    title: string;
+}
