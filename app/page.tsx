@@ -54,8 +54,8 @@ export default function Home() {
 
 
           <div className={`md:my-[1rem] md:mt-[3rem] mt-16`}>
-            <Link href="/#about">
-              <button className={`md:w-[13em] bg-[#000] h-[2.5em] md:text-lg text-sm rounded-md text-white md:mx-[1.9rem] w-[47vw] mx-1 hover:scale-[105%] duration-[500ms]`}>About Me</button>
+            <Link href="/projects">
+              <button className={`md:w-[13em] bg-[#000] h-[2.5em] md:text-lg text-sm rounded-md text-white md:mx-[1.9rem] w-[47vw] mx-1 hover:scale-[105%] duration-[500ms]`}>My Projects</button>
             </Link>
 
             <Link href={"/"} passHref={true}>

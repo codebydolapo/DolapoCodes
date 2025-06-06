@@ -16,6 +16,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         className='w-full h-full rounded-full object-cover' // Using w-full, h-full and object-cover to mimic 'fill' and 'objectFit'
                         unoptimized
                         width={0} height={0}
+                        priority
                     />
                 </div>
 
@@ -48,7 +49,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         </div>
                     </a>
                     {/* Reverted to standard a tag */}
-                    <a href={"/"}> {/* Consider if this should be a link to a specific resume file or page */}
+                    <a href={"https://drive.google.com/file/d/1K_yIskE7EsHcnbIw9McpUmKk6F_e_lDw/view?usp=drive_link"}> {/* Consider if this should be a link to a specific resume file or page */}
                         <button className={`md:w-[12rem] md:h-[3rem] md:text-normal border-[1px] border-black text-black rounded-lg my-3 font-bold w-[48vw] h-[3rem] hover:scale-[105%] text-sm`}>Read My Resume</button>
                     </a>
                 </div>
@@ -58,7 +59,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         <Image
                             src='/icons/linkedin.webp'
                             alt='LinkedIn icon'
-                            className='w-10 h-10 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
+                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
                             unoptimized
                             width={0} height={0}
                         />
@@ -67,7 +68,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         <Image
                             src='/icons/git.png'
                             alt='GitHub icon'
-                            className='w-10 h-10 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
+                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
                             unoptimized
                             width={0} height={0}
                         />
@@ -76,7 +77,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         <Image
                             src='/icons/twitter.png'
                             alt='Twitter icon'
-                            className='w-10 h-10 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
+                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
                             unoptimized
                             width={0} height={0}
                         />
@@ -85,7 +86,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         <Image
                             src='/icons/facebook.png'
                             alt='Facebook icon'
-                            className='w-10 h-10 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
+                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
                             unoptimized
                             width={0} height={0}
                         />
@@ -94,7 +95,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         <Image
                             src='/icons/instagram.png'
                             alt='Instagram icon'
-                            className='w-10 h-10 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
+                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
                             unoptimized
                             width={0} height={0}
                         />
