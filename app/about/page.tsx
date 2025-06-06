@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 function About() { // Renamed to About for convention, assuming it's a page component
     return (
-        <div className={`md:min-w-[100%] md:min-h-[100vh] md:h-[100vh] md:mb-0 flex md:flex-row md:border-b-0 md:mt-0 pb-5 items-center justify-center min-h-[100vh] h-auto mb-[2rem] flex-col-reverse border-b-[1rem] border-black mt-[2rem] md:px-2`} id='about'>
+        <div className={`md:min-w-[100%] md:min-h-[100vh] md:h-[100vh] md:mb-0 flex md:flex-row md:border-b-0 md:mt-0 pb-5 items-center justify-center min-h-[100vh] h-auto mb-[2rem] flex-col-reverse border-b-[1rem] border-black mt-[1rem] md:px-2`} id='about'>
 
             <div className={`md:w-[40%] md:h-full overflow-hidden flex items-center justify-center w-[100%] h-[50%]`}>
                 <div className={`md:w-[30rem] md:h-[30rem] rounded-full relative w-[98%] h-[50%] `}>

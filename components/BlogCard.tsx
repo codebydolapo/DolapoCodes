@@ -88,7 +88,7 @@ function BlogCard({
 
             </div>
             <div className='p-4'> {/* Added padding to the content below the image */}
-                <h1 className='font-semibold text-xl my-2'>{title}</h1> {/* Display title from prop */}
+                <h1 className='font-semibold md:text-xl text-lg my-2'>{title}</h1> {/* Display title from prop */}
                 <p className='text-sm my-4'>{excerpt}</p> {/* Display description from prop */}
             </div>
         </div >
