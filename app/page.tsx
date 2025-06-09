@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import {Dancing_Script } from "next/font/google";
+import resume from "@/data/resume";
 
 
 const dancing = Dancing_Script({
@@ -58,7 +59,7 @@ export default function Home() {
               <button className={`md:w-[13em] bg-[#000] h-[2.5em] md:text-lg text-sm rounded-md text-white md:mx-[1.9rem] w-[47vw] mx-1 hover:scale-[105%] duration-[500ms]`}>My Projects</button>
             </Link>
 
-            <Link href={"/"} passHref={true}>
+            <Link href={resume} passHref={true}>
               <button className={`md:w-[13em] border-[2px] border-[black] bg-[#66d47e02] h-[2.5em] md:text-lg text-sm rounded-md text-[#000] font-bold md:mx-[1.9rem] w-[47vw] mx-1 hover:scale-[105%] duration-[500ms]`}>My Resume</button>
             </Link>
           </div>

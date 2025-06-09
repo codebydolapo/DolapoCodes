@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import resume from '@/data/resume'
 // Removed 'next/link' and 'next/image' imports to resolve compilation errors
 
 
@@ -49,7 +50,7 @@ function About() { // Renamed to About for convention, assuming it's a page comp
                         </div>
                     </a>
                     {/* Reverted to standard a tag */}
-                    <a href={"https://drive.google.com/file/d/1K_yIskE7EsHcnbIw9McpUmKk6F_e_lDw/view?usp=drive_link"}> {/* Consider if this should be a link to a specific resume file or page */}
+                    <a href={resume}> {/* Consider if this should be a link to a specific resume file or page */}
                         <button className={`md:w-[12rem] md:h-[3rem] md:text-normal border-[1px] border-black text-black rounded-lg my-3 font-bold w-[48vw] h-[3rem] hover:scale-[105%] text-sm`}>Read My Resume</button>
                     </a>
                 </div>
