@@ -1,5 +1,21 @@
 const projects = [
     {
+        title: "Verity",
+        image: ["/images/verity/1.png", "/images/verity/2.jpg", "/images/verity/3.png", "/images/verity/4.png", "/images/verity/5.png", "/images/verity/6.png"], // Assuming an image for the editor page exists
+        description: "A modern and responsive e-commerce product discovery platform built with Next.js. It delivers a seamless shopping experience by enabling users to explore top-selling items, perform product searches, and view detailed product information",
+        type: "web",
+        stack: [
+            { icon: "/icons/nextjs.png", technology: "Next.js" },
+            { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
+            { icon: "/icons/radix.png", technology: "Radix UI" }, // Assuming an icon for Radix UI
+            { icon: "/icons/shadcn.png", technology: "Shadcn UI" }, // Assuming an icon for Shadcn UI
+            { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
+            { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
+        ],
+        liveLink: "https://prelo-kappa.vercel.app/", // Placeholder, replace with actual link if available
+        gitRepo: "https://github.com/codebydolapo/Verity" // Placeholder, replace with actual link if available
+    },
+    {
         title: "Prelo",
         image: ["/images/prelo/1.gif", "/images/prelo/2.gif", "/images/prelo/3.webp", "/images/prelo/4.webp", "/images/prelo/5.gif"], // Assuming an image for the editor page exists
         description: "A real-time collaborative document editor with AI-powered text summary and translation, alongside live chats. It leverages Next.js, Liveblocks, BlockNote, and Firebase for a seamless collaborative experience.",
