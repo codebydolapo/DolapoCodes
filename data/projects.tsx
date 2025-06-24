@@ -1,5 +1,21 @@
 const projects = [
     {
+        title: "Updrive",
+        image: ["/images/updrive/1.gif", "/images/updrive/2.jpg", "/images/updrive/3.png", "/images/updrive/4.png", "/images/updrive/5.png", "/images/updrive/6.png"], // Assuming an image for the editor page exists
+        description: "A modern platform for car rentals of any kind. Built with Next.js. It comes with the best car rental experience, complete with expandable google maps, search functionality and more.",
+        type: "web",
+        stack: [
+            { icon: "/icons/nextjs.png", technology: "Next.js" },
+            { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
+            { icon: "/icons/radix.png", technology: "Radix UI" }, // Assuming an icon for Radix UI
+            { icon: "/icons/shadcn.png", technology: "Shadcn UI" }, // Assuming an icon for Shadcn UI
+            { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
+            { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
+        ],
+        liveLink: "/", // Placeholder, replace with actual link if available
+        gitRepo: "https://github.com/codebydolapo/Updrive" // Placeholder, replace with actual link if available
+    },
+    {
         title: "Verity",
         image: ["/images/verity/1.png", "/images/verity/2.jpg", "/images/verity/3.png", "/images/verity/4.png", "/images/verity/5.png", "/images/verity/6.png"], // Assuming an image for the editor page exists
         description: "A modern and responsive e-commerce product discovery platform built with Next.js. It delivers a seamless shopping experience by enabling users to explore top-selling items, perform product searches, and view detailed product information",
