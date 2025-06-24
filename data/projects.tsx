@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "Updrive",
-        image: ["/images/updrive/1.gif", "/images/updrive/2.jpg", "/images/updrive/3.png", "/images/updrive/4.png", "/images/updrive/5.png", "/images/updrive/6.png"], // Assuming an image for the editor page exists
+        image: ["/images/updrive/1.gif", "/images/updrive/2.png", "/images/updrive/3.png", "/images/updrive/4.png", "/images/updrive/5.png", "/images/updrive/6.png"], // Assuming an image for the editor page exists
         description: "A modern platform for car rentals of any kind. Built with Next.js. It comes with the best car rental experience, complete with expandable google maps, search functionality and more.",
         type: "web",
         stack: [
