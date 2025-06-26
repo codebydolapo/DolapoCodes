@@ -12,7 +12,7 @@ const projects = [
             { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
             { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
         ],
-        liveLink: "/", // Placeholder, replace with actual link if available
+        liveLink: "https://updrive-gamma.vercel.app/", // Placeholder, replace with actual link if available
         gitRepo: "https://github.com/codebydolapo/Updrive" // Placeholder, replace with actual link if available
     },
     {
