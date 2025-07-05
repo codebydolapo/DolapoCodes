@@ -16,6 +16,23 @@ const projects = [
         gitRepo: "https://github.com/codebydolapo/Updrive" // Placeholder, replace with actual link if available
     },
     {
+        title: "TinyWags",
+        image: ["/images/tinywags/1.gif", "/images/tinywags/2.png", "/images/tinywags/3.png", "/images/tinywags/4.png", "/images/tinywags/5.png"], // Assuming an image for the editor page exists
+        description: "A modern pet adoption platform built with Next.js as the frontend and Graph QL as the backend. It comes with fast data fetching, prt foundation donations and more",
+        type: "web",
+        stack: [
+            { icon: "/icons/nextjs.png", technology: "Next.js" },
+            { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
+            { icon: "/icons/graph.png", technology: "Graph QL" }, // Assuming an icon for TypeScript
+            { icon: "/icons/radix.png", technology: "Radix UI" }, // Assuming an icon for Radix UI
+            { icon: "/icons/shadcn.png", technology: "Shadcn UI" }, // Assuming an icon for Shadcn UI
+            { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
+            { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
+        ],
+        liveLink: "/", // Placeholder, replace with actual link if available
+        gitRepo: "https://github.com/codebydolapo/TinyWags" // Placeholder, replace with actual link if available
+    },
+    {
         title: "Verity",
         image: ["/images/verity/1.png", "/images/verity/2.jpg", "/images/verity/3.png", "/images/verity/4.png", "/images/verity/5.png", "/images/verity/6.png"], // Assuming an image for the editor page exists
         description: "A modern and responsive e-commerce product discovery platform built with Next.js. It delivers a seamless shopping experience by enabling users to explore top-selling items, perform product searches, and view detailed product information",
