@@ -17,7 +17,7 @@ const projects = [
     },
     {
         title: "TinyWags",
-        image: ["/images/tinywags/1.gif", "/images/tinywags/2.png", "/images/tinywags/3.png", "/images/tinywags/4.png", "/images/tinywags/5.png"], // Assuming an image for the editor page exists
+        image: ["/images/tinywags/1.gif", "/images/tinywags/2.png", "/images/tinywags/3.png", "/images/tinywags/4.png", "/images/tinywags/5.png", "/images/tinywags/6.png", "/images/tinywags/7.png"], // Assuming an image for the editor page exists
         description: "A modern pet adoption platform built with Next.js as the frontend and Graph QL as the backend. It comes with fast data fetching, prt foundation donations and more",
         type: "web",
         stack: [
