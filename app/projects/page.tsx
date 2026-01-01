@@ -17,7 +17,7 @@ export default function ProjectsPage() {
           </h1>
           <div className='w-20 h-1 bg-blue-500'></div>
           <p className='mt-4 text-lg text-gray-600 max-w-2xl'>
-            Here's a collection of my recent work in web and mobile development
+            Here&apos;s a collection of my recent work in web and mobile development
           </p>
         </div>
 

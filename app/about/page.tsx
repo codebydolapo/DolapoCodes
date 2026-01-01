@@ -40,13 +40,13 @@ function About() {
             {/* Bio Content */}
             <div className="space-y-4 text-center md:text-left max-w-2xl">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Hi, I'm <span className="font-semibold text-blue-600">Bashorun Dolapo</span>, 
+                Hi, I&apos;m <span className="font-semibold text-blue-600">Bashorun Dolapo</span>, 
                 a <span className="font-semibold text-blue-600">product-focused software engineer</span> specializing 
                 in web and mobile development.
               </p>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                I'm passionate about <span className="font-semibold text-blue-600">building products</span> that 
+                I&apos;m passionate about <span className="font-semibold text-blue-600">building products</span> that 
                 solve real-world problems, and am proficient with tools and tech like <span className="font-semibold text-blue-600">Typescript, Next.js </span> and more.
               </p>
               
@@ -56,7 +56,7 @@ function About() {
               </p>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                When I'm not coding, you'll find me enjoying walks, writing, watching movies or 
+                When I&apos;m not coding, you&apos;ll find me enjoying walks, writing, watching movies or 
                 listening to music.
               </p>
             </div>
@@ -70,7 +70,7 @@ function About() {
                 className="flex-1"
               >
                 <button className="w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
-                  Let's Discuss!
+                  Let&apos;s Discuss!
                   <Image
                     src="/icons/telegram.png"
                     alt=""
