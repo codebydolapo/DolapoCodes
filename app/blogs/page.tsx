@@ -12,10 +12,10 @@ export default function BlogPage() {
                 
                 {/* Page Header */}
                 <div className='mb-12'>
-                    <h1 className='text-4xl md:text-5xl font-bold text-gray-900 mb-2'>
+                    <h1 className='text-3xl md:text-5xl font-bold text-gray-900 mb-2'>
                         Blog Posts
                     </h1>
-                    <div className='w-20 h-1 bg-blue-500'></div>
+                    <div className='w-20 h-1 bg-[#5188ff]'></div>
                     <p className='mt-4 text-lg text-gray-600 max-w-2xl'>
                         Thoughts, tutorials, and insights on web development, technology, and software engineering
                     </p>

@@ -102,7 +102,7 @@ function BlogCard({
             {/* Content Section */}
             <div className='p-5 space-y-3'>
                 {/* Title */}
-                <h2 className='font-bold text-xl text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors'>
+                <h2 className='font-bold text-xl text-gray-900 line-clamp-2 group-hover:[#5188ff] transition-colors'>
                     {title}
                 </h2>
                 
@@ -117,7 +117,7 @@ function BlogCard({
                         href={link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className='inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm pt-2 group/link'
+                        className='inline-flex items-center gap-2 text-[#5188ff] hover:text-[#5188ff] font-medium text-sm pt-2 group/link'
                     >
                         <span>Read Article</span>
                         <ExternalLink className='w-4 h-4 transition-transform group-hover/link:translate-x-1' />

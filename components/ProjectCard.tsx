@@ -154,7 +154,7 @@ function ProjectCard({
                             href={liveLink} 
                             target="_blank" 
                             rel="noopener noreferrer" 
-                            className='inline-flex items-center gap-2 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors duration-200'
+                            className='inline-flex items-center gap-2 px-4 py-2 bg-[#5188ff] hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-colors duration-200'
                         >
                             <Globe className='w-4 h-4' />
                             <span>Live Demo</span>

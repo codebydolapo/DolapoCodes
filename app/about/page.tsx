@@ -31,28 +31,28 @@ function About() {
             
             {/* Welcome Heading */}
             <div className="text-center md:text-left w-full">
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">
                 About Me
               </h1>
-              <div className="w-20 h-1 bg-blue-500 mx-auto md:mx-0"></div>
+              <div className="w-20 h-1 bg-[#5188ff] mx-auto md:mx-0"></div>
             </div>
 
             {/* Bio Content */}
             <div className="space-y-4 text-center md:text-left max-w-2xl">
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Hi, I&apos;m <span className="font-semibold text-blue-600">Bashorun Dolapo</span>, 
-                a <span className="font-semibold text-blue-600">product-focused software engineer</span> specializing 
+                Hi, I&apos;m <span className="font-semibold text-[#5188ff]">Bashorun Dolapo</span>, 
+                a <span className="font-semibold text-[#5188ff]">product-focused software engineer</span> specializing 
                 in web and mobile development.
               </p>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                I&apos;m passionate about <span className="font-semibold text-blue-600">building products</span> that 
-                solve real-world problems, and am proficient with tools and tech like <span className="font-semibold text-blue-600">Typescript, Next.js </span> and more.
+                I&apos;m passionate about <span className="font-semibold text-[#5188ff]">building products</span> that 
+                solve real-world problems, and am proficient with tools and tech like <span className="font-semibold text-[#5188ff]">Typescript, Next.js </span> and more.
               </p>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-               I have a <span className="font-semibold text-blue-600">keen eye for detail</span>, I focus 
-                on <span className="font-semibold text-blue-600">meeting user needs</span> through user-friendly experiences that delight customers.
+               I have a <span className="font-semibold text-[#5188ff]">keen eye for detail</span>, I focus 
+                on <span className="font-semibold text-[#5188ff]">meeting user needs</span> through user-friendly experiences that delight customers.
               </p>
               
               <p className="text-base md:text-lg text-gray-700 leading-relaxed">
@@ -69,7 +69,7 @@ function About() {
                 rel="noopener noreferrer"
                 className="flex-1"
               >
-                <button className="w-full px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
+                <button className="w-full px-6 py-3 bg-[#5188ff] hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
                   Let&apos;s Discuss!
                   <Image
                     src="/icons/telegram.png"

@@ -58,7 +58,7 @@ export default function Home() {
           
           {/* Title and Description */}
           <div className="text-center space-y-3 max-w-2xl px-4">
-            <h2 className="text-xl md:text-2xl font-semibold text-gray-700">
+            <h2 className="text-xl md:text-2xl font-semibold text-[#5188ff]">
               Full Stack Developer
             </h2>
             <p className="text-base md:text-lg text-gray-600 leading-relaxed">
