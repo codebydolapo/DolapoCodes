@@ -1,113 +1,153 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import resume from '@/data/resume'
-// Removed 'next/link' and 'next/image' imports to resolve compilation errors
 
-
-function About() { // Renamed to About for convention, assuming it's a page component
-    return (
-        <div className={`md:min-w-[100%] md:min-h-[100vh] md:h-[100vh] md:mb-0 flex md:flex-row md:border-b-0 md:mt-0 pb-5 items-center justify-center min-h-[100vh] h-auto mb-[2rem] flex-col-reverse border-b-[1rem] border-black mt-[1rem] md:px-2`} id='about'>
-
-            <div className={`md:w-[40%] md:h-full overflow-hidden flex items-center justify-center w-[100%] h-[50%]`}>
-                <div className={`md:w-[30rem] md:h-[30rem] rounded-full relative w-[98%] h-[50%] `}>
-                    {/* Reverted to standard Image tag and adjusted styling for responsiveness */}
-                    <Image
-                        src='/images/me4.jpg'
-                        alt='Bashorun Dolapo profile picture'
-                        className='w-full h-full rounded-full object-cover' // Using w-full, h-full and object-cover to mimic 'fill' and 'objectFit'
-                        unoptimized
-                        width={0} height={0}
-                        priority
-                    />
-                </div>
-
+function About() {
+  return (
+    <section 
+      className="min-h-screen w-full flex items-center justify-center py-12 md:py-0" 
+      id="about"
+    >
+      <div className="max-w-7xl w-full px-4 md:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
+          
+          {/* Profile Image Section */}
+          <div className="w-full md:w-5/12 flex items-center justify-center order-1 md:order-2">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96">
+              <Image
+                src="/images/me4.jpg"
+                alt="Bashorun Dolapo"
+                fill
+                className="rounded-full object-cover shadow-2xl ring-4 ring-gray-100"
+                priority
+                sizes="(max-width: 768px) 256px, (max-width: 1024px) 320px, 384px"
+              />
             </div>
-            <div className={`md:w-[60%] md:h-full flex flex-col items-center justify-center w-[100%] h-[50%]`}>
-                <div className={`md:w-[50%] flex flex-col w-[98%]`}>
-                    <h1 className={`text-center text-[#1DA1F2] my-2 md:text-4xl font-extrabold text-2xl`}>Welcome!</h1>
-                    <p className={`text-center text-black my-2 md:text-lg text-sm`}>My name is <b className="text-[#1DA1F2]">Bashorun Dolapo</b>, and I am a <b className="text-[#1DA1F2]">Product-focused web/mobile software Engineer</b> </p>
-                    <p className={`text-center text-black my-2 md:text-lg text-sm`}>I have a burning passion for <b className="text-[#1DA1F2]">building products</b> that help others and solve real world problems.</p>
-                    <p className={`text-center text-black my-2 md:text-lg text-sm`}>
-                        I have a <b className="text-[#1DA1F2]">keen eye for detail</b> and am looking forward to <b className="text-[#1DA1F2]">meeting user needs</b> with intuitive and user-friendly experiences.</p>
-                    {/* <p className={`text-center text-black my-2`}>
-                    I am a strong advocate for <b className="text-[#1DA1F2]">collaboration and innovation</b>, and I ensure that products are not only functional, but also delightful to use</p> */}
-                    <p className={`text-center text-black my-2 md:text-lg text-sm`}>
-                        When I&apos;m not working on delivering great products, I enjoy Walks, Writing, Movies, Music and Weightlifting</p>
+          </div>
 
-                </div>
-                <div className={`md:w-[50%] flex items-start justify-around w-[98%]`}>
-                    {/* Reverted to standard a tag */}
-                    <a href="https://t.me/CodeByDolapo" target="_blank" rel="noopener noreferrer">
-                        <div className={`md:w-[12rem] md:h-[3rem] md:text-normal flex items-center justify-center bg-[#24A1DE] text-white rounded-lg my-3 w-[48vw] h-[3rem] cursor-pointer hover:scale-[105%] text-sm`}>Let&apos;s Discuss!
-                            {/* Reverted to standard Image tag */}
-                            <Image
-                                src='/icons/telegram.png'
-                                alt='Telegram icon'
-                                className='w-8 h-8 rounded-xl mx-2 cursor-pointer' // Added h-8 explicitly for better sizing
-                                unoptimized
-                                width={0} height={0}
-                            />
-                        </div>
-                    </a>
-                    {/* Reverted to standard a tag */}
-                    <a href={resume}> {/* Consider if this should be a link to a specific resume file or page */}
-                        <button className={`md:w-[12rem] md:h-[3rem] md:text-normal border-[1px] border-black text-black rounded-lg my-3 font-bold w-[48vw] h-[3rem] hover:scale-[105%] text-sm`}>Read My Resume</button>
-                    </a>
-                </div>
-                <div className={`my-[1rem] h-12 w-96 flex items-center justify-center mt-10`}>
-                    {/* Reverted to standard a tag and Image tags */}
-                    <a href="https://www.linkedin.com/in/bashorun-dolapo-8b5164225/" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src='/icons/linkedin.webp'
-                            alt='LinkedIn icon'
-                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
-                            unoptimized
-                            width={0} height={0}
-                        />
-                    </a>
-                    <a href="https://github.com/codebydolapo" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src='/icons/git.png'
-                            alt='GitHub icon'
-                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
-                            unoptimized
-                            width={0} height={0}
-                        />
-                    </a>
-                    <a href="https://twitter.com/the_transistorr" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src='/icons/twitter.png'
-                            alt='Twitter icon'
-                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
-                            unoptimized
-                            width={0} height={0}
-                        />
-                    </a>
-                    <a href="https://web.facebook.com/bashorun.dolapo.3" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src='/icons/facebook.png'
-                            alt='Facebook icon'
-                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
-                            unoptimized
-                            width={0} height={0}
-                        />
-                    </a>
-                    <a href="https://www.instagram.com/_0xdolapo/" target="_blank" rel="noopener noreferrer">
-                        <Image
-                            src='/icons/instagram.png'
-                            alt='Instagram icon'
-                            className='md:size-10 size-8 rounded-xl mx-3 cursor-pointer hover:scale-[110%]'
-                            unoptimized
-                            width={0} height={0}
-                        />
-                    </a>
-                </div>
-
+          {/* Content Section */}
+          <div className="w-full md:w-7/12 flex flex-col items-center md:items-start order-2 md:order-1 space-y-6">
+            
+            {/* Welcome Heading */}
+            <div className="text-center md:text-left w-full">
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900 mb-2">
+                About Me
+              </h1>
+              <div className="w-20 h-1 bg-[#5188ff] mx-auto md:mx-0"></div>
             </div>
 
+            {/* Bio Content */}
+            <div className="space-y-4 text-center md:text-left max-w-2xl">
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                Hi, I&apos;m <span className="font-semibold text-[#5188ff]">Bashorun Dolapo</span>, 
+                a <span className="font-semibold text-[#5188ff]">product-focused software engineer</span> specializing 
+                in web and mobile development.
+              </p>
+              
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                I&apos;m passionate about <span className="font-semibold text-[#5188ff]">building products</span> that 
+                solve real-world problems, and am proficient with tools and tech like <span className="font-semibold text-[#5188ff]">Typescript, Next.js </span> and more.
+              </p>
+              
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+               I have a <span className="font-semibold text-[#5188ff]">keen eye for detail</span>, I focus 
+                on <span className="font-semibold text-[#5188ff]">meeting user needs</span> through user-friendly experiences that delight customers.
+              </p>
+              
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                When I&apos;m not coding, you&apos;ll find me enjoying walks, writing, watching movies or 
+                listening to music.
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md pt-4">
+              <a 
+                href="https://t.me/CodeByDolapo" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
+                <button className="w-full px-6 py-3 bg-[#5188ff] hover:bg-blue-600 text-white rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 flex items-center justify-center gap-2">
+                  Let&apos;s Discuss!
+                  <Image
+                    src="/icons/telegram.png"
+                    alt=""
+                    width={24}
+                    height={24}
+                    className="w-6 h-6"
+                  />
+                </button>
+              </a>
+              
+              <Link 
+                href={resume} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex-1"
+              >
+                <button className="w-full px-6 py-3 border-2 border-gray-900 bg-white text-gray-900 rounded-lg font-medium hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105">
+                  View Resume
+                </button>
+              </Link>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex items-center justify-center md:justify-start gap-4 pt-4">
+              <a 
+                href="https://www.linkedin.com/in/bashorun-dolapo-8b5164225/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="LinkedIn Profile"
+              >
+                <Image
+                  src="/icons/linkedin.webp"
+                  alt="LinkedIn"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-lg transition-transform duration-300 group-hover:scale-110 shadow-md group-hover:shadow-lg"
+                />
+              </a>
+              
+              <a 
+                href="https://github.com/codebydolapo" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="GitHub Profile"
+              >
+                <Image
+                  src="/icons/git.png"
+                  alt="GitHub"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-lg transition-transform duration-300 group-hover:scale-110 shadow-md group-hover:shadow-lg"
+                />
+              </a>
+              
+              <a 
+                href="https://twitter.com/the_transistorr" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group"
+                aria-label="Twitter Profile"
+              >
+                <Image
+                  src="/icons/twitter.png"
+                  alt="Twitter"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 rounded-lg transition-transform duration-300 group-hover:scale-110 shadow-md group-hover:shadow-lg"
+                />
+              </a>
+            </div>
+          </div>
         </div>
-    )
+      </div>
+    </section>
+  )
 }
 
 export default About
-

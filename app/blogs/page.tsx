@@ -1,33 +1,46 @@
+// ============================================
+// page.tsx - Blog Posts Page
+// ============================================
 import BlogCard from '@/components/BlogCard'
-import { BlogPosts } from '@/types/types'
 import React from 'react'
 import blogPosts from '@/data/blogPosts'
 
-function page() {
+export default function BlogPage() {
     return (
-        <div className={`
-      md:min-w-[100%] md:min-h-[100vh] md:h-[100vh] md:mb-0 md:border-b-0 md:p-2 flex flex-col  md:mt-0 pb-5 
-      min-h-[100vh] h-auto mb-[2rem] mt-[1rem] overflow-y-scroll`} >
-            <div className={`w-full h-[3rem] flex flex-row items-center justify-start px-5 md:pl-10 pl-2 `}>
-                <h1 className={`md:text-3xl font-extrabold text-xl text-[#000000] underline`}>Blog Posts</h1>
-            </div>
-            <div className='w-full flex items-start justify-around flex-wrap p-2 mt-4'>
+        <section className='min-h-screen w-full py-12 px-4'>
+            <div className='max-w-7xl mx-auto'>
+                
+                {/* Page Header */}
+                <div className='mb-12'>
+                    <h1 className='text-3xl md:text-5xl font-bold text-gray-900 mb-2'>
+                        Blog Posts
+                    </h1>
+                    <div className='w-20 h-1 bg-[#5188ff]'></div>
+                    <p className='mt-4 text-lg text-gray-600 max-w-2xl'>
+                        Thoughts, tutorials, and insights on web development, technology, and software engineering
+                    </p>
+                </div>
 
-                {blogPosts.map(({ title, excerpt, link, image }: BlogPosts, index) => {
-                    return (
+                {/* Blog Posts Grid */}
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                    {blogPosts.map((post, index) => (
                         <BlogCard
-                            title={title}
-                            excerpt={excerpt}
-                            link={link}
-                            image={image}
-                            key = {index}
+                            key={post.title || index} // Use title as key if unique, fallback to index
+                            title={post.title}
+                            excerpt={post.excerpt}
+                            link={post.link}
+                            image={post.image}
                         />
-                    )
-                }
+                    ))}
+                </div>
+
+                {/* Empty State */}
+                {blogPosts.length === 0 && (
+                    <div className='text-center py-20'>
+                        <p className='text-gray-500 text-lg'>No blog posts yet. Check back soon!</p>
+                    </div>
                 )}
             </div>
-        </div>
+        </section>
     )
 }
-
-export default page

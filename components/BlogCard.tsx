@@ -1,18 +1,22 @@
+// ============================================
+// BlogCard.tsx - Component
+// ============================================
 "use client"
 import React, { useState, useCallback, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight, ExternalLink } from 'lucide-react';
 import { BlogPosts } from '@/types/types';
 import useEmblaCarousel from 'embla-carousel-react';
-import Autoplay from 'embla-carousel-autoplay'; // Optional: for auto-playing the slider
+import Autoplay from 'embla-carousel-autoplay';
 
 function BlogCard({
-    title, excerpt, 
-    // link, 
-    image // Destructure 'image' prop
+    title, 
+    excerpt, 
+    link, 
+    image
 }: BlogPosts) {
-    // Embla Carousel hook. Autoplay plugin is added for automatic sliding.
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 3000 })]);
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [Autoplay({ delay: 4000, stopOnInteraction: true })]);
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     const scrollPrev = useCallback(() => {
@@ -26,73 +30,102 @@ function BlogCard({
     const onSelect = useCallback(() => {
         if (!emblaApi) return;
         setSelectedIndex(emblaApi.selectedScrollSnap());
-    }, [emblaApi, setSelectedIndex]);
+    }, [emblaApi]);
 
     useEffect(() => {
         if (!emblaApi) return;
         onSelect();
         emblaApi.on('select', onSelect);
-        emblaApi.on('reInit', onSelect); // Re-initialize on window resize/orientation change
+        emblaApi.on('reInit', onSelect);
     }, [emblaApi, onSelect]);
 
-
     return (
-        <div className='w-[23rem] min-h-[25rem] mt-4 shadow-lg rounded-xl overflow-hidden'> {/* Added shadow and rounded corners */}
-            <div className='relative w-full min-h-[12rem] overflow-hidden'> {/* Set a fixed height for the image container */}
+        <article className='w-full max-w-sm bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group'>
+            
+            {/* Image Carousel Section */}
+            <div className='relative w-full h-56 bg-gray-100 overflow-hidden'>
                 <div className="embla" ref={emblaRef}>
                     <div className="embla__container flex h-full">
                         {image.map((imgSrc, index) => (
                             <div className="embla__slide flex-shrink-0 w-full h-full" key={index}>
                                 <Image
-                                    className="object-cover w-full h-full" // Use object-cover to fill the space
-                                    alt={`${title} project screenshot ${index + 1}`}
+                                    className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                                    alt={`${title} illustration ${index + 1}`}
                                     src={imgSrc}
-                                    width={500} // Set a relevant width
-                                    height={300} // Set a relevant height to maintain aspect ratio with object-cover
-                                    unoptimized={imgSrc.endsWith('.gif')} // Unoptimize only if it's a GIF
-                                    priority={index === 0} // Prioritize loading the first image
+                                    width={400}
+                                    height={224}
+                                    unoptimized={imgSrc.endsWith('.gif')}
+                                    priority={index === 0}
                                 />
                             </div>
                         ))}
                     </div>
                 </div>
 
-                {/* Slider navigation buttons */}
-                {image.length > 1 && ( // Only show controls if there's more than one image
+                {/* Navigation Controls - Only show if multiple images */}
+                {image.length > 1 && (
                     <>
                         <button
-                            className="absolute top-1/2 left-2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-75 transition-all"
+                            className="absolute top-1/2 left-3 -translate-y-1/2 bg-black/60 hover:bg-black/80 p-2 rounded-full text-white transition-all opacity-0 group-hover:opacity-100"
                             onClick={scrollPrev}
+                            aria-label="Previous image"
                         >
                             <ChevronLeft size={20} />
                         </button>
                         <button
-                            className="absolute top-1/2 right-2 -translate-y-1/2 bg-black bg-opacity-50 p-2 rounded-full text-white hover:bg-opacity-75 transition-all"
+                            className="absolute top-1/2 right-3 -translate-y-1/2 bg-black/60 hover:bg-black/80 p-2 rounded-full text-white transition-all opacity-0 group-hover:opacity-100"
                             onClick={scrollNext}
+                            aria-label="Next image"
                         >
                             <ChevronRight size={20} />
                         </button>
 
-                        {/* Dots for navigation */}
-                        <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-2">
+                        {/* Dots Navigation */}
+                        <div className="absolute bottom-3 left-0 right-0 flex justify-center gap-2">
                             {image.map((_, index) => (
                                 <button
                                     key={index}
-                                    className={`w-2 h-2 rounded-full ${selectedIndex === index ? 'bg-white' : 'bg-gray-400 bg-opacity-70'} transition-colors`}
+                                    className={`h-2 rounded-full transition-all ${
+                                        selectedIndex === index 
+                                            ? 'bg-white w-6' 
+                                            : 'bg-white/60 hover:bg-white/80 w-2'
+                                    }`}
                                     onClick={() => emblaApi && emblaApi.scrollTo(index)}
+                                    aria-label={`Go to image ${index + 1}`}
                                 />
                             ))}
                         </div>
                     </>
                 )}
+            </div>
 
+            {/* Content Section */}
+            <div className='p-5 space-y-3'>
+                {/* Title */}
+                <h2 className='font-bold text-xl text-gray-900 line-clamp-2 group-hover:[#5188ff] transition-colors'>
+                    {title}
+                </h2>
+                
+                {/* Excerpt */}
+                <p className='text-sm text-gray-600 leading-relaxed line-clamp-3'>
+                    {excerpt}
+                </p>
+                
+                {/* Read More Link */}
+                {link && (
+                    <Link 
+                        href={link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className='inline-flex items-center gap-2 text-[#5188ff] hover:text-[#5188ff] font-medium text-sm pt-2 group/link'
+                    >
+                        <span>Read Article</span>
+                        <ExternalLink className='w-4 h-4 transition-transform group-hover/link:translate-x-1' />
+                    </Link>
+                )}
             </div>
-            <div className='p-4'> {/* Added padding to the content below the image */}
-                <h1 className='font-semibold md:text-xl text-lg my-2'>{title}</h1> {/* Display title from prop */}
-                <p className='text-sm my-4'>{excerpt}</p> {/* Display description from prop */}
-            </div>
-        </div >
+        </article>
     )
 }
 
-export default BlogCard
+export default BlogCard;

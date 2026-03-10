@@ -1,29 +1,28 @@
+// ============================================
+// SkillsCard.tsx - Component
+// ============================================
 import React from 'react';
 import Image from 'next/image';
 import { Skills } from '@/types/types';
 
-
-
 const SkillsCard: React.FC<Skills> = ({ icon, title }) => {
     return (
-        <div className="
-            flex flex-col items-center justify-center p-4 m-2
-            bg-white rounded-lg shadow-md hover:shadow-lg
-            transition-all duration-300 transform hover:-translate-y-5
-            w-[8rem] h-[8rem] sm:w-[9rem] sm:h-[9rem] md:w-[10rem] md:h-[10rem]
-            cursor-pointer
-        ">
-            <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-2">
+        <div className="group relative flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 w-32 h-32 sm:w-36 sm:h-36 cursor-pointer border border-gray-100">
+            {/* Icon Container */}
+            <div className="relative w-14 h-14 sm:w-16 sm:h-16 mb-3 transition-transform duration-300 group-hover:scale-110">
                 <Image
                     src={icon}
-                    alt={title}
+                    alt={`${title} icon`}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    style={{ objectFit: 'contain' }}
-                    unoptimized={icon.endsWith('.gif') || icon.endsWith('.webp') || icon.endsWith('.jpg') || icon.endsWith('.png')} // Unoptimize based on common image types
+                    sizes="64px"
+                    className="object-contain"
                 />
             </div>
-            <p className="text-sm sm:text-base font-semibold text-gray-800 text-center mt-2">{title}</p>
+            
+            {/* Title */}
+            <p className="text-xs sm:text-sm font-semibold text-gray-800 text-center leading-tight">
+                {title}
+            </p>
         </div>
     );
 };
