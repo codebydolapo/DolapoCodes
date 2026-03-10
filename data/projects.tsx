@@ -1,8 +1,8 @@
 const projects = [
     {
-        title: "Updrive",
-        image: ["/images/updrive/1.gif", "/images/updrive/2.png", "/images/updrive/3.png", "/images/updrive/4.png", "/images/updrive/5.png", "/images/updrive/6.png"], // Assuming an image for the editor page exists
-        description: "A modern platform for car rentals of any kind. Built with Next.js. It comes with the best car rental experience, complete with expandable google maps, search functionality and more.",
+        title: "Oge's Closet",
+        image: ["/images/oges_closet/1.png", "/images/oges_closet/2.png", "/images/oges_closet/3.png"], // Assuming an image for the editor page exists
+        description: "Template E-commerce platform for a small fashion brand built with Next.js. It comes with a seamless shopping experience, complete with expandable google maps, search functionality and more.",
         type: "web",
         stack: [
             { icon: "/icons/nextjs.png", technology: "Next.js" },
@@ -12,8 +12,24 @@ const projects = [
             { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
             { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
         ],
-        liveLink: "https://updrive-gamma.vercel.app/", // Placeholder, replace with actual link if available
-        gitRepo: "https://github.com/codebydolapo/Updrive" // Placeholder, replace with actual link if available
+        liveLink: "https://oge-s-closet.vercel.app/", // Placeholder, replace with actual link if available
+        gitRepo: "https://github.com/codebydolapo/Oge-s-Closet" // Placeholder, replace with actual link if available
+    },
+    {
+        title: "Rabiu Autos",
+        image: ["/images/rabiu_autos/1.png", "/images/rabiu_autos/2.png", "/images/rabiu_autos/3.png"], // Assuming an image for the editor page exists
+        description: "Car purchase web app with gsap, tailwind CSS and typescript.",
+        type: "web",
+        stack: [
+            { icon: "/icons/nextjs.png", technology: "Next.js" },
+            { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
+            { icon: "/icons/radix.png", technology: "Radix UI" }, // Assuming an icon for Radix UI
+            { icon: "/icons/shadcn.png", technology: "Shadcn UI" }, // Assuming an icon for Shadcn UI
+            { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
+            { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
+        ],
+        liveLink: "https://rabiu-autos.vercel.app/", // Placeholder, replace with actual link if available
+        gitRepo: "https://github.com/codebydolapo/Rabiu-Autos" // Placeholder, replace with actual link if available
     },
     {
         title: "TinyWags",
@@ -31,6 +47,22 @@ const projects = [
         ],
         liveLink: "/", // Placeholder, replace with actual link if available
         gitRepo: "https://github.com/codebydolapo/TinyWags" // Placeholder, replace with actual link if available
+    },
+    {
+        title: "Updrive",
+        image: ["/images/updrive/1.gif", "/images/updrive/2.png", "/images/updrive/3.png", "/images/updrive/4.png", "/images/updrive/5.png", "/images/updrive/6.png"], // Assuming an image for the editor page exists
+        description: "A modern platform for car rentals of any kind. Built with Next.js. It comes with the best car rental experience, complete with expandable google maps, search functionality and more.",
+        type: "web",
+        stack: [
+            { icon: "/icons/nextjs.png", technology: "Next.js" },
+            { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
+            { icon: "/icons/radix.png", technology: "Radix UI" }, // Assuming an icon for Radix UI
+            { icon: "/icons/shadcn.png", technology: "Shadcn UI" }, // Assuming an icon for Shadcn UI
+            { icon: "/icons/tailwind.jpg", technology: "Tailwind CSS" },
+            { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
+        ],
+        liveLink: "https://updrive-gamma.vercel.app/", // Placeholder, replace with actual link if available
+        gitRepo: "https://github.com/codebydolapo/Updrive" // Placeholder, replace with actual link if available
     },
     {
         title: "Verity",
@@ -69,38 +101,38 @@ const projects = [
         liveLink: "https://prelo-kappa.vercel.app/", // Placeholder, replace with actual link if available
         gitRepo: "https://github.com/codebydolapo/Prelo" // Placeholder, replace with actual link if available
     },
-    {
-        title: "Animax",
-        image: ["/images/animax/1.webp",], // Assuming images for sign-in, homepage, watchlist, and shop
-        description: "A mobile application for watching and bookmarking anime, as well as purchasing anime-themed merchandise. It features Google Authentication, a watchlist, a shop section with a payment workflow, and Lottie animations.",
-        type: "mobile",
-        stack: [
-            { icon: "/icons/react.png", technology: "React Native" }, // Assuming an icon for React Native
-            { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
-            { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
-            { icon: "/icons/appwrite.png", technology: "Appwrite" }, // Assuming an icon for Appwrite
-            { icon: "/icons/expo.png", technology: "Expo" }, // Assuming an icon for Expo
-            { icon: "/icons/lottie.webp", technology: "Lottie Animations" }, // Assuming an icon for Lottie
-        ],
-        liveLink: "/", // Mobile apps typically don't have live web links; consider a demo video link or leave blank
-        gitRepo: "https://github.com/codebydolapo/Animax" // Placeholder, replace with actual link if available
-    },
-    {
-        title: "Homely",
-        image: ["/images/homely/1.webp"], // Assuming images for various screens
-        description: "A real estate mobile application built with React Native and Expo, offering property listings, purchase capabilities with fingerprint authentication, and engaging UI/UX features including Lottie animations.",
-        type: "mobile",
-        stack: [
-            { icon: "/icons/react.png", technology: "React Native" },
-            { icon: "/icons/expo.png", technology: "Expo" },
-            { icon: "/icons/appwrite.png", technology: "Appwrite" },
-            { icon: "/icons/typescript.png", technology: "TypeScript" },
-            { icon: "/icons/lottie.webp", technology: "Lottie Animations" },
-            // Add other relevant icons if explicit technologies are mentioned for UI or other functionalities
-        ],
-        liveLink: "/", // Mobile apps typically don't have live web links; consider a demo video link or leave blank
-        gitRepo: "https://github.com/codebydolapo/Homely" // Placeholder, replace with actual link if available
-    },
+    // {
+    //     title: "Animax",
+    //     image: ["/images/animax/1.webp",], // Assuming images for sign-in, homepage, watchlist, and shop
+    //     description: "A mobile application for watching and bookmarking anime, as well as purchasing anime-themed merchandise. It features Google Authentication, a watchlist, a shop section with a payment workflow, and Lottie animations.",
+    //     type: "mobile",
+    //     stack: [
+    //         { icon: "/icons/react.png", technology: "React Native" }, // Assuming an icon for React Native
+    //         { icon: "/icons/typescript.png", technology: "TypeScript" }, // Assuming an icon for TypeScript
+    //         { icon: "/icons/redux.png", technology: "Redux" }, // Assuming an icon for Redux
+    //         { icon: "/icons/appwrite.png", technology: "Appwrite" }, // Assuming an icon for Appwrite
+    //         { icon: "/icons/expo.png", technology: "Expo" }, // Assuming an icon for Expo
+    //         { icon: "/icons/lottie.webp", technology: "Lottie Animations" }, // Assuming an icon for Lottie
+    //     ],
+    //     liveLink: "/", // Mobile apps typically don't have live web links; consider a demo video link or leave blank
+    //     gitRepo: "https://github.com/codebydolapo/Animax" // Placeholder, replace with actual link if available
+    // },
+    // {
+    //     title: "Homely",
+    //     image: ["/images/homely/1.webp"], // Assuming images for various screens
+    //     description: "A real estate mobile application built with React Native and Expo, offering property listings, purchase capabilities with fingerprint authentication, and engaging UI/UX features including Lottie animations.",
+    //     type: "mobile",
+    //     stack: [
+    //         { icon: "/icons/react.png", technology: "React Native" },
+    //         { icon: "/icons/expo.png", technology: "Expo" },
+    //         { icon: "/icons/appwrite.png", technology: "Appwrite" },
+    //         { icon: "/icons/typescript.png", technology: "TypeScript" },
+    //         { icon: "/icons/lottie.webp", technology: "Lottie Animations" },
+    //         // Add other relevant icons if explicit technologies are mentioned for UI or other functionalities
+    //     ],
+    //     liveLink: "/", // Mobile apps typically don't have live web links; consider a demo video link or leave blank
+    //     gitRepo: "https://github.com/codebydolapo/Homely" // Placeholder, replace with actual link if available
+    // },
     {
         title: "Subscription Tracker & User Management API",
         image: ["/images/api_project/api_project.png"], // You'll need to create or choose an appropriate icon/image for this
